@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{ useState }  from 'react';
 
 
 const ComponentA = () =>{
@@ -24,6 +24,15 @@ const ComponentA = () =>{
         setCount(0)
       }
 
+    const [change, setChange] = useState();
+    
+    const [massege, setMassege] = useState();
+    
+    const handleClick = () => {
+        setMassege(change)
+    }
+    
+
 return(
 
     <div>
@@ -43,7 +52,15 @@ return(
         {count}
         </div>
 
+        <div>
+        <h1>level 4</h1>
+        <input type="text" name="name" onChange={e => setChange(e.target.value)}/>
+        <button onClick={handleClick}>hello</button>
+        <div>{massege}</div>
+        </div>
     </div>
+
+
 
 )
 

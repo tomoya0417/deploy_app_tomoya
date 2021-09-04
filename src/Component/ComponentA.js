@@ -40,6 +40,30 @@ const ComponentA = () =>{
         setErrorMassege("")
         }
     }
+
+        const index = Math.floor(Math.random()*3);
+        const handArray = ['ぐー','ちょき','ぱー'];
+        const enemyHand = handArray[index];
+        const [my,setMy] = React.useState('');
+        const [enemy,setEnemy] = React.useState('');
+        const [result,setResult] = React.useState('');
+        const fight = (myHand) => {
+            if(myHand === enemyHand){
+                setResult('引き分け');
+                setMy(myHand)
+                setEnemy(enemyHand);
+              };
+              if(enemyHand === 'ぐー' && myHand === 'ぱー' || enemyHand === 'ちょき' && myHand === 'ぐー' || enemyHand === 'ぱー' && myHand === 'ちょき'){
+                setResult('あなたの勝ちです。');
+                setMy(myHand)
+                setEnemy(enemyHand);
+              };
+              if(enemyHand === 'ぐー' && myHand === 'ちょき' || enemyHand === 'ちょき' && myHand === 'ぱー' ||enemyHand === 'ぱー' && myHand === 'ぐー'){
+                setResult('あなたの負けです。');
+                setMy(myHand)
+                setEnemy(enemyHand);
+              };
+            }
     
     return(
 
@@ -70,18 +94,19 @@ const ComponentA = () =>{
 
         <div>
         <h1>level 6</h1>
-        <button>ぐー</button>
-        <button>ちょき</button>
-        <button>ぱー</button>
+        <button onClick={()=>fight('ぐー')}>ぐー</button>
+        <button onClick={()=>fight('ちょき')}>ちょき</button>
+        <button onClick={()=>fight('ぱー')}>ぱー</button>
+        
+        <p>自分の手 : {my}</p>
+        <p>cpuの手 : {enemy}</p> 
+        <p>勝敗 : {result}</p>   
         </div>
     </div>
-
-
-
-)
+);
 
 }
 
 
 
-export default ComponentA ;
+export default ComponentA

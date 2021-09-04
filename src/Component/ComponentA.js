@@ -24,16 +24,24 @@ const ComponentA = () =>{
         setCount(0)
       }
 
-    const [change, setChange] = useState();
+    const [change, setChange] = useState("");
     
-    const [massege, setMassege] = useState();
+    const [massege, setMassege] = useState("");
+
+    const [errorMassege, setErrorMassege] = useState("");
     
     const handleClick = () => {
+      if(change === ""){
+        setErrorMassege("なにか文字を入力してください。")
+        setMassege("")
+    }
+      else{
         setMassege(change)
+        setErrorMassege("")
+        }
     }
     
-
-return(
+    return(
 
     <div>
         <div>
@@ -53,10 +61,18 @@ return(
         </div>
 
         <div>
-        <h1>level 4</h1>
+        <h1>level 4,5</h1>
         <input type="text" name="name" onChange={e => setChange(e.target.value)}/>
         <button onClick={handleClick}>hello</button>
         <div>{massege}</div>
+        <div style={{color:'red'}}>{errorMassege}</div>
+        </div>
+
+        <div>
+        <h1>level 6</h1>
+        <button>ぐー</button>
+        <button>ちょき</button>
+        <button>ぱー</button>
         </div>
     </div>
 

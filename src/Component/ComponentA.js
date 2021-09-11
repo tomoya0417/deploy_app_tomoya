@@ -1,5 +1,5 @@
 import React,{ useState }  from 'react';
-
+import { Link } from "react-router-dom";
 
 const ComponentA = () =>{
     const [count,setCount] = useState(0)
@@ -68,6 +68,7 @@ const ComponentA = () =>{
     return(
 
     <div>
+      <Link to="ComponentB">ComponentB</Link> 
         <div>
         <h1>level 1</h1>
         <button onClick={Hello}>Hello World</button></div>
@@ -93,7 +94,7 @@ const ComponentA = () =>{
         </div>
 
         <div>
-        <h1>level 6</h1>
+        <h1>level 6.7</h1>
         <button onClick={()=>fight('ぐー')}>ぐー</button>
         <button onClick={()=>fight('ちょき')}>ちょき</button>
         <button onClick={()=>fight('ぱー')}>ぱー</button>

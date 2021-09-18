@@ -7,7 +7,7 @@ const ComponentB = () =>{
 
 return(
 <div>  
- <Link to="ComponentA">ComponentA</Link> 
+ <Link to="/">ComponentA</Link> 
     <div>
        <h1>level 8</h1>
     </div>

@@ -9,7 +9,7 @@ function App() {
       <Route exact path="/" >
         <ComponentA />
       </Route>
-      <Route exact path="/componentb/:slug" >
+      <Route exact path="/ComponentB" >
         <ComponentB />
       </Route>
     </Switch>

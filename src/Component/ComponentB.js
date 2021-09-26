@@ -11,13 +11,22 @@ const ComponentB = () =>{
    })
    }, [])
 
+   console.log(posts)
 return(
 <div>  
  <Link to="/">ComponentA</Link> 
     <div>
       <h1>level 8,9</h1>
          <ul>
-         { posts.map(post => <li key={post.id}> {post.title} </li>)}
+         { posts.map(post => {
+            return(
+               <li key={post.id}> 
+                  <a href={post.url}>
+                     {post.title} 
+                  </a>
+               </li>
+            )}) 
+         }
          </ul>
     </div>
 </div>

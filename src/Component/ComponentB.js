@@ -14,9 +14,13 @@ const ComponentB = () =>{
    console.log(posts)
 return(
 <div>  
- <Link to="/">ComponentA</Link> 
+ <Link to="/">ComponentA</Link>
+ <Link to="PageA">PageA</Link>
+ <Link to="PageB">PageB</Link> 
+   <table class="table table-striped">
     <div>
       <h1>level 8,9</h1>
+      <h3>記事一覧</h3>
          <ul>
          { posts.map(post => {
             return(
@@ -29,6 +33,7 @@ return(
          }
          </ul>
     </div>
+    </table>
 </div>
 );
 }

@@ -68,7 +68,9 @@ const ComponentA = () =>{
     return(
 
     <div>
-      <Link to="ComponentB">ComponentB</Link> 
+      <Link to="ComponentB">ComponentB</Link>
+      <Link to="PageA">PageA</Link>
+      <Link to="PageB">PageB</Link> 
         <div>
         <h1>level 1</h1>
         <button onClick={Hello}>Hello World</button></div>

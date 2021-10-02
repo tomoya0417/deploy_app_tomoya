@@ -8,10 +8,9 @@ const ComponentB = () =>{
       axios.get('https://qiita.com/api/v2/items')
       .then(res => {
           setPosts(res.data)
-   })
+      })
+      console.log("🚀 ~ file: ComponentB.js ~ line 7 ~ ComponentB ~ posts", posts)
    }, [])
-
-   console.log(posts)
 return(
 <div>  
  <Link to="/">ComponentA</Link>

@@ -1,7 +1,7 @@
 import ComponentA from './Component/ComponentA'
 import ComponentB from './Component/ComponentB'
-import PageA from './PAGE/PageA';
-import PageB from './PAGE/PageB';
+import PageA from './page/pageA';
+import PageB from './page/pageB';
 
 import { BrowserRouter as Router, Route, Switch, useHistory } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -21,7 +21,7 @@ function App() {
       <Route exact path="/PageA" >
         <PageA />
       </Route>
-      <Route exact path="/PageB" >
+      <Route exact path="/PageB/:slug" >
         <PageB />
       </Route>
     </Switch>

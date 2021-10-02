@@ -10,7 +10,7 @@ return(
     <div>
       <Link to="/">ComponentA</Link>
       <Link to="ComponentB">ComponentB</Link>
-      <Link to="PageB">PageB</Link> 
+      <Link to="PageB/test">PageB</Link> 
 
     <h1>level11</h1>       
 

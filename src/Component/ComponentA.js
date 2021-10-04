@@ -70,7 +70,7 @@ const ComponentA = () =>{
     <div>
       <Link to="ComponentB">ComponentB</Link>
       <Link to="PageA">PageA</Link>
-      <Link to="PageB">PageB</Link> 
+      <Link to="/PageB/zzz">PageB</Link> 
         <div>
         <h1>level 1</h1>
         <button onClick={Hello}>Hello World</button></div>

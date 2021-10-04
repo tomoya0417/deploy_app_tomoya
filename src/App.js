@@ -3,14 +3,12 @@ import ComponentB from './Component/ComponentB'
 import PageA from './PAGE/PageA';
 import PageB from './PAGE/PageB';
 
-import { BrowserRouter as Router, Route, Switch, useHistory } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-
-  const histry =useHistory();
-  return (  
-    <Router histry ={ histry }>
+  return(
+    <Router >
     <Switch>
       <Route exact path="/" >
         <ComponentA />
@@ -21,12 +19,11 @@ function App() {
       <Route exact path="/PageA" >
         <PageA />
       </Route>
-      <Route exact path="/PageB" >
+      <Route exact path="/PageB/:slug" >
         <PageB />
       </Route>
     </Switch>
   </Router>
-  )
-}
+  )}
 
 export default App
